@@ -1,131 +1,62 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Game Talk**
+## **Site Overview**
 
-Welcome USER_NAME,
+As a big fan of Video Games i often find it hard to keep track of what games are out, coming out, popular etc. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Game Talk is designed with the aim of creating a platform where everyone can share their games that they have played and talk about their experience and opinions about it. Users can create, read, update and delete game reviews which can be viewed by themselves and other users. The community experience comes from the ability to comment on games and reviews which then generates discussions about said games and creates a forum to interact and engange with others.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+<hr>
 
-## Gitpod Reminders
+(Am I Responsive Screenshot)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+(Click here to view the final deployment of the site)
 
-`python3 -m http.server`
+<hr>
 
-A blue button should appear to click: _Make Public_,
+## Table of Contents:
+1. [**Site Overview**](#site-overview)
+1. [**Planning stage**](#planning-stage)
+    * [**Strategy**](#strategy)
+      * [***Site Aims***](#site-aims)
+      * [***Target Audiences***](#target-audiences)
+      * [***User Stories***](#user-stories)
 
-Another blue button should appear to click: _Open Browser_.
+<hr>
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## **Planning Stage**
+### **Site Aims:**
 
-A blue button should appear to click: _Make Public_,
+* Develop a colourful, interactive website for Video Game players to come together as a community.
+* To provide users with a platform they can use to discuss video games.
+* Deliver an accessible and easy to navigate site for users on desktop and mobile devices.
+* Provide registered users with the opportunity to share their Video Game experiences and to Create, Read, Update or Delete video game reviews on the site.
+* Provide users with an opportunity to discover future games they may want to play.
+* Offer users the opportunity to interect with others by liking or commenting on posts by other users.
+* Ensure the content is safe as reviews and comments must be approved by the admin.
+* Enhance the user experience by implementing a search function for those who are trying to find something specific to their interest.
+* Offer registered users the opportunity to provide information about themselves by adding a bio to their user profile.
+* Provide the user with a clear and concise About page about the site.
 
-Another blue button should appear to click: _Open Browser_.
+<hr>
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### **Target Audiences:**
 
-To log into the Heroku toolbelt CLI:
+* People who are fans of Video Games.
+* People looking to share their experiences on certain Video Games.
+* People looking for an online Video Game discussion website that is easy to sign up to and navigate.
+* People seeking for future Video Games to play.
+* People who would like to comment on other Video Game reviews to start a discussion.
+* People who are new to Video Games and would like to engage with the community.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<hr>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### **User Stories**
 
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+#### **Site User**
+As a **Registered** user I can:
+* *create draft Video Game posts* in order for *admin to approve and post them after reviewing*.
+* *view a list of Video Game posts* in order to *select one to view*.
+* *click on a Video Game post* in order to *view its content*.
+* *create a Video Game post* in order to *share my review with the community*.
+* *comment on other user's Video Game posts* in order to *share my opinion and interact within the community*.
+* *upload a profile picture or bio* in order to *tell a little more about myself*.
