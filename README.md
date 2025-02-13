@@ -20,6 +20,8 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
       * [***Site Aims***](#site-aims)
       * [***Target Audiences***](#target-audiences)
       * [***User Stories***](#user-stories)
+    * [***Wireframes***](#wireframes)
+    * [***Database Schema***](#database-schema)
 
 <hr>
 
@@ -60,3 +62,41 @@ As a **Registered** user I can:
 * *create a Video Game post* in order to *share my review with the community*.
 * *comment on other user's Video Game posts* in order to *share my opinion and interact within the community*.
 * *upload a profile picture or bio* in order to *tell a little more about myself*.
+* *edit or update my profile* in order to *keep my account up to date*.
+* *like or unlike a Video Game review* in order to *interact with site content*.
+* *easily login* in order to *access my account*.
+* *easily logout* in order to *end my session on the site*.
+* *edit or delete my own Video Game post* in order to *keep my own posts relevant*.
+
+As an **Unregistered** User I can:
+* *easily determine the purpose of the site* in order to *see if I want to register and join*.
+* *easily register* in order to *start interacting with the content and the community*.
+
+#### **Site Admin**
+As a **Site Admin** I can:
+* *approve user Video Game reviews* in order to *publish them to the site and check their content is appropriate*
+* *approve user comments* in order to *check that they are appropriate*
+* *view the number of likes on a Video Game review* in order to *see which is the most popular*
+* *delete user accounts* in order to *remove users who do not appreciate and respect others in the community*
+
+<hr>
+
+### **Wireframes**
+
+I used Balsamiq Wireframes to help me with my design process for this project.
+
+(Wireframe images)
+
+<hr>
+
+### **Database Schema**
+I used [DrawSQL](https://drawsql.app/) to help visualise my database tables. See the image below:
+![Database Schema](docs/images/DrawSQL-diagram.png)
+
+<hr>
+
+### **Colour Scheme**
+After researching various options for this project, I opted for the colour scheme below:
+![Colour Palette](docs/images/colour-pallette.png)
+
+<hr>
