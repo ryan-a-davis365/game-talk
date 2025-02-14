@@ -22,6 +22,7 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
       * [***User Stories***](#user-stories)
     * [***Wireframes***](#wireframes)
     * [***Database Schema***](#database-schema)
+    * [***Typography***](#typography)
 
 <hr>
 
@@ -100,3 +101,10 @@ After researching various options for this project, I opted for the colour schem
 ![Colour Palette](docs/images/colour-pallette.png)
 
 <hr>
+
+#### **Typography**
+
+I researched a few different fonts that I thought would fit the sites theme. I eventually decided on:
+
+*[Roboto](https://fonts.google.com/specimen/Roboto)
+I chose Roboto for its simplicity so the site is readible, also the font reminds of my text you see in Video Games which fits perfectly for the site.
