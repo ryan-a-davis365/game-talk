@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+STATUS = ((0, "Draft"), (1, "Published"))
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     description = models.TextField()
@@ -9,6 +12,7 @@ class Post(models.Model):
     platform = models.CharField()
     release_date = models.CharField()
     genre = models.CharField()
+    status = models.IntegerField(choices=STATUS, default=0)
     publisher = models.CharField()
     developer = models.CharField()
     created_by = models.ForeignKey(
