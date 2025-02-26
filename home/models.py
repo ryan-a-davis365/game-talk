@@ -7,6 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     platform = models.CharField()

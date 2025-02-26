@@ -1,0 +1,13 @@
+/* Nav Styling */
+
+.nav-bg {
+    background-color: #222222;
+}
+
+.navbar-nav .nav-link {
+    color: #84DCC6 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffff !important; /* Change hover color */
+}
