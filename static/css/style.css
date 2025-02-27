@@ -11,3 +11,8 @@
 .navbar-nav .nav-link:hover {
     color: #ffff !important; /* Change hover color */
 }
+
+.post-link {
+    text-decoration: none;
+    color: #4B4E6D;
+}
