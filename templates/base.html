@@ -22,6 +22,8 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <script src="https://kit.fontawesome.com/ebbcf62481.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -48,9 +50,10 @@
                         </li>
                     </ul>
                     <form class="search-form" method="GET" action="{% url 'home' %}">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-                <button class="btn" type="submit">Search</button>
-            </form>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            name="q">
+                        <button class="btn" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -64,6 +67,9 @@
     <footer class="footer">
         <div class="container">
             <p class="mb-0">&copy; Made by Ryan Davis. All rights reserved.</p>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
 
