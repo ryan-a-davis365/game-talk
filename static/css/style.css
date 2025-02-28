@@ -45,3 +45,31 @@ main {
     padding: 10px 0;
     text-align: center;
 }
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form .form-control {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.btn {
+    border-color: #84DCC6;
+    color: #84DCC6;
+}
+
+.btn:hover {
+    color: #000000;
+    background-color: #84DCC6;
+}

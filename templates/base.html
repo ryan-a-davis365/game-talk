@@ -47,6 +47,10 @@
                             <a class="nav-link" href="#">Login</a>
                         </li>
                     </ul>
+                    <form class="search-form" method="GET" action="{% url 'home' %}">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                <button class="btn" type="submit">Search</button>
+            </form>
                 </div>
             </div>
         </nav>
