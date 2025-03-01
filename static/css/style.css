@@ -26,7 +26,7 @@
 
 .post-link {
     text-decoration: none;
-    color: #4B4E6D;
+    color: #84DCC6;
 }
 
 .card-title {
@@ -41,6 +41,7 @@
 .card {
     margin-bottom: 20px;
     padding: 10px;
+    background-color: rgba(34, 34, 34, 0.7);
 }
 
 /* Footer */
@@ -105,7 +106,7 @@ i {
     margin-bottom: 10px;
 }
 
-.about-page {
+.background {
     background: url("../images/about-background.png") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
@@ -113,8 +114,8 @@ i {
     padding-top: 50px;
 }
 
-.about-page .container {
-    background-color: rgba(0, 0, 0, 0.2);
+.background .container {
+    background-color: rgba(34, 34, 34, 0.7);
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
