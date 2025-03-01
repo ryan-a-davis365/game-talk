@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Nav Styling */
 
 .nav-bg {
@@ -12,6 +18,10 @@
     color: #ffff !important;
 }
 
+.navbar-brand {
+    color: #84DCC6 !important;
+}
+
 /* Post Styling */
 
 .post-link {
@@ -21,6 +31,16 @@
 
 .card-title {
     margin-top: 5px;
+}
+
+.col-md-4 {
+    max-width: 300px;
+    margin: 0;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 /* Footer */
@@ -76,4 +96,26 @@ main {
 
 i {
     color: #84DCC6;
+}
+
+/* About Page */
+
+.about-title {
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about-page {
+    background: url("../images/about-background.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #84DCC6;
+    padding-top: 50px;
+}
+
+.about-page .container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
 }

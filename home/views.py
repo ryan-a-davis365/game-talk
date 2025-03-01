@@ -24,3 +24,6 @@ def post_detail(request, slug):
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     return render(request, "home/post_detail.html", {"post": post})
+
+def about(request):
+    return render(request, 'about.html')
