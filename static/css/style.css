@@ -31,6 +31,15 @@
 
 .card-title {
     margin-top: 5px;
+    color: #84DCC6;
+}
+
+.card-title:hover {
+    color: #ffffff;
+}
+
+.card-text {
+    color: #84DCC6;
 }
 
 .col-md-4 {
