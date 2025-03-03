@@ -129,3 +129,9 @@ i {
     border-radius: 10px;
     margin-top: 20px;
 }
+
+/* Authentication */
+
+.sign-up-out {
+    padding-top: 30px;
+}
