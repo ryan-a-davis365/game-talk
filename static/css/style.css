@@ -22,6 +22,10 @@
     color: #84DCC6 !important;
 }
 
+.navbar-brand:hover {
+    color: #ffff !important;
+}
+
 /* Post Styling */
 
 .post-link {
