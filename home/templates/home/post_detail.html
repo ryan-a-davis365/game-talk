@@ -1,27 +1,83 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
 
-<div class="masthead">
+<div class="masthead background">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
-                <p class="post-subtitle">{{ post.created_by }} | {{ post.created_on }}</p>
+                <p class="post-description"> {{ post.description }} </p>
+                <h6> Platform(s): {{ post.platform }} </h6>
+                <h6> Release Date: {{ post.release_date }} </h6>
+                <h6> Genre: {{ post.genre }} </h6>
+                <h6> Publisher: {{ post.publisher }} </h6>
+                <h6> Developer: {{ post.developer }} </h6>
+                <h7 class="post-subtitle">{{ post.created_by }} | {{ post.created_on }}</h7>
+                
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if post.image %}
+                <img src="{{ post.image.url }}" class="scale" alt="{{ post.title }}">
+                {% else %}
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
 
 <div class="container">
+    <div class="row comment-count">
+        <div class="col-12">
+            <strong class="text-secondary">
+                <i class="far fa-comments"></i> {{ comment_count }}
+            </strong>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
             <div class="card-body">
-                <p class="card-text">
-                    {{ post.content | safe }}
-                </p>
+                {% for comment in comments %}
+                <div class="p-2 comments
+              {% if not comment.approved and comment.created_by == user %}
+              faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="font-weight-bold">
+                        {{ comment.created_by }} wrote:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    <span class="font-weight-normal comment-date">
+                        {{ comment.created_on }}
+                    </span>
+                    {% if not comment.approved and comment.created_by == user %}
+                    <p class="approval">
+                        This comment is awaiting approval
+                    </p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4 mt-3 comment-box">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p class="color">Log in to leave a comment</p>
+                {% endif %}
             </div>
         </div>
     </div>

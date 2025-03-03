@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post
 from django.db.models import Q
+from .forms import CommentForm
 
 class PostList(generic.ListView):
     template_name = "home/index.html"
@@ -21,9 +22,16 @@ class PostList(generic.ListView):
         return queryset
 
 def post_detail(request, slug):
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    return render(request, "home/post_detail.html", {"post": post})
+    post = get_object_or_404(Post, slug=slug)
+    comments = post.comments.filter(approved=True)
+    comment_count = comments.count()
+    comment_form = CommentForm()
+    return render(request, 'home/post_detail.html', {
+        'post': post,
+        'comments': comments,
+        'comment_count': comment_count,
+        'comment_form': comment_form,
+    })
 
 def about(request):
     return render(request, 'about.html')

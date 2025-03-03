@@ -57,6 +57,10 @@
     background-color: rgba(34, 34, 34, 0.7);
 }
 
+.post-description {
+    font-size: 1.5rem;
+}
+
 /* Footer */
 html {
     height: 100%;
@@ -142,4 +146,34 @@ i {
 
 .authstatus {
     color: #84DCC6 !important;
+}
+
+/* Comments */
+
+.comments {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(34, 34, 34, 0.7);
+    border-radius: 10px;
+}
+
+.comments p {
+    color: #84DCC6 !important;
+}
+
+.comment-date {
+    color: #84DCC6 !important;
+    font-size: 0.7rem;
+}
+
+.comment-box {
+    margin-left: 10px;
+}
+
+.comment-count {
+    margin-top: 20px;
+}
+
+.color {
+    color: #84DCC6;
 }
