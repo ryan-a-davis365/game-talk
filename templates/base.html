@@ -65,6 +65,11 @@
                             name="q">
                         <button class="btn" type="submit">Search</button>
                     </form>
+                        {% if user.is_authenticated %}
+                        <p class="text-end m-3 authstatus">You are logged in as {{ user }}</p>
+                        {% else %}
+                        <p class="text-end m-3 authstatus">You are not logged in</p>
+                        {% endif %}
                 </div>
             </div>
         </nav>

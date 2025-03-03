@@ -135,3 +135,7 @@ i {
 .sign-up-out {
     padding-top: 30px;
 }
+
+.authstatus {
+    color: #84DCC6 !important;
+}
