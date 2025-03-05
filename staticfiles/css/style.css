@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Nav Styling */
 
 .nav-bg {
@@ -16,15 +22,28 @@
     color: #84DCC6 !important;
 }
 
+.navbar-brand:hover {
+    color: #ffff !important;
+}
+
 /* Post Styling */
 
 .post-link {
     text-decoration: none;
-    color: #4B4E6D;
+    color: #84DCC6;
 }
 
 .card-title {
     margin-top: 5px;
+    color: #84DCC6;
+}
+
+.card-title:hover {
+    color: #ffffff;
+}
+
+.card-text {
+    color: #84DCC6;
 }
 
 .col-md-4 {
@@ -35,6 +54,11 @@
 .card {
     margin-bottom: 20px;
     padding: 10px;
+    background-color: rgba(34, 34, 34, 0.7);
+}
+
+.post-description {
+    font-size: 1.5rem;
 }
 
 /* Footer */
@@ -95,13 +119,61 @@ i {
 /* About Page */
 
 .about-title {
-    margin-top: 10px;
+    padding-top: 10px;
     margin-bottom: 10px;
 }
 
-.about-page {
-    background: url("{% static 'images/about-background.png' %}") no-repeat center center fixed;
+.background {
+    background: url("../images/about-background.png") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
+    color: #84DCC6;
+    padding-top: 50px;
+}
+
+.background .container {
+    background-color: rgba(34, 34, 34, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Authentication */
+
+.sign-up-out {
+    padding-top: 30px;
+}
+
+.authstatus {
+    color: #84DCC6 !important;
+}
+
+/* Comments */
+
+.comments {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(34, 34, 34, 0.7);
+    border-radius: 10px;
+}
+
+.comments p {
+    color: #84DCC6 !important;
+}
+
+.comment-date {
+    color: #84DCC6 !important;
+    font-size: 0.7rem;
+}
+
+.comment-box {
+    margin-left: 10px;
+}
+
+.comment-count {
+    margin-top: 20px;
+}
+
+.color {
     color: #84DCC6;
 }
