@@ -195,6 +195,12 @@ i {
     font-style: italic;
 }
 
+.unknown-text:focus,
+.unknown-text:not(:placeholder-shown) {
+    font-style: normal;
+    color: #000;
+}
+
 .background-post {
     background: url("../images/about-background.png") no-repeat center center fixed;
     background-size: cover;
@@ -208,4 +214,26 @@ i {
     background-color: rgba(34, 34, 34, 0.7);
     padding: 20px;
     border-radius: 10px;
+}
+
+.post-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.post-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.post-image {
+    flex: 0 0 300px;
+}
+
+.post-image img {
+    margin-left: 150px;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }

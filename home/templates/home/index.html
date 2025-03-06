@@ -15,8 +15,8 @@
                                 {% endif %}
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.description }}</p>
+                                <h2 class="card-title">{{ post.title|truncatechars:30 }}</h2>
+                                <p class="card-text">{{ post.description|truncatechars:100 }}</p>
                             </a>
                             <hr />
                             <p class="card-text h6">{{ post.created_on }} Author: {{ post.created_by }}</p>

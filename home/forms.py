@@ -22,12 +22,11 @@ class PostForm(forms.ModelForm):
             'status': forms.Select(attrs={'class': 'form-control'}),
         }
 
-        def __init__(self, *args, **kwargs):
-            self.fields['title'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['description'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['platform'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['release_date'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['genre'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['publisher'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['developer'].widget.attrs.update({'class': 'form-control unknown-text'})
-            self.fields['status'].widget.attrs.update({'class': 'form-control unknown-text'})
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        self.fields['platform'].widget.attrs.update({'class': 'form-control unknown-text', 'placeholder': 'Unknown'})
+        self.fields['release_date'].widget.attrs.update({'class': 'form-control unknown-text', 'placeholder': 'Unknown'})
+        self.fields['genre'].widget.attrs.update({'class': 'form-control unknown-text', 'placeholder': 'Unknown'})
+        self.fields['publisher'].widget.attrs.update({'class': 'form-control unknown-text', 'placeholder': 'Unknown'})
+        self.fields['developer'].widget.attrs.update({'class': 'form-control unknown-text', 'placeholder': 'Unknown'})
+        self.fields['status'].widget.attrs.update({'class': 'form-control unknown-text', 'placeholder': 'Unknown'})

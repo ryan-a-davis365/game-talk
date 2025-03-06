@@ -9,15 +9,14 @@
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <p class="post-description"> {{ post.description }} </p>
-                <h6> Platform(s): {{ post.platform }} </h6>
-                <h6> Release Date: {{ post.release_date }} </h6>
-                <h6> Genre: {{ post.genre }} </h6>
-                <h6> Publisher: {{ post.publisher }} </h6>
-                <h6> Developer: {{ post.developer }} </h6>
+                <p><strong>Platform(s):</strong> {{ post.platform }} </p>
+                <p><strong>Release Date:</strong> {{ post.release_date }} </p>
+                <p><strong>Genre:</strong> {{ post.genre }} </p>
+                <p><strong>Publisher:</strong> {{ post.publisher }} </p>
+                <p><strong>Developer:</strong> {{ post.developer }} </p>
                 <h7 class="post-subtitle">{{ post.created_by }} | {{ post.created_on }}</h7>
-
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="post-image">
                 {% if post.image %}
                 <img src="{{ post.image.url }}" class="scale" alt="{{ post.title }}">
                 {% else %}
