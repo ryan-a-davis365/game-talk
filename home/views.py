@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -6,6 +6,7 @@ from .models import Post, Comment
 from django.db.models import Q
 from .forms import CommentForm
 from django.contrib.auth.models import User
+from .forms import PostForm
 
 class PostList(generic.ListView):
     template_name = "home/index.html"
@@ -23,6 +24,21 @@ class PostList(generic.ListView):
                 Q(genre__icontains=query)
             )
         return queryset
+    
+
+def create_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            messages.success(request, 'Post created successfully!')
+            return redirect('home')
+    else:
+        form = PostForm()
+    return render(request, 'home/create_post.html', {'form': form})
+
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
@@ -48,6 +64,7 @@ def post_detail(request, slug):
         'comment_count': comment_count,
         'comment_form': comment_form,
     })
+
 
 def about(request):
     return render(request, 'about.html')
@@ -101,5 +118,3 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-def create_post(request):
-    return render(request, 'home/create_post.html')
