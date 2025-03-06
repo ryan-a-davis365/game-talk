@@ -10,4 +10,24 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'description', 'release_date', 'platform', 'genre', 'status']
+        fields = ['title', 'description', 'platform', 'release_date', 'genre', 'publisher', 'developer', 'status', 'image',]
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control'}),
+            'platform': forms.TextInput(attrs={'class': 'form-control'}),
+            'release_date': forms.TextInput(attrs={'class': 'form-control'}),
+            'genre': forms.TextInput(attrs={'class': 'form-control'}),
+            'publisher': forms.TextInput(attrs={'class': 'form-control'}),
+            'developer': forms.TextInput(attrs={'class': 'form-control'}),
+            'status': forms.Select(attrs={'class': 'form-control'}),
+        }
+
+        def __init__(self, *args, **kwargs):
+            self.fields['title'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['description'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['platform'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['release_date'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['genre'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['publisher'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['developer'].widget.attrs.update({'class': 'form-control unknown-text'})
+            self.fields['status'].widget.attrs.update({'class': 'form-control unknown-text'})

@@ -132,7 +132,7 @@ i {
     background-size: cover;
     min-height: 100vh;
     color: #84DCC6;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .background .container {
@@ -146,6 +146,11 @@ i {
 
 .authstatus {
     color: #84DCC6 !important;
+}
+
+.login-create {
+    margin-left: 20px;
+    font-size: 1.5rem;
 }
 
 /* Comments */
@@ -176,4 +181,31 @@ i {
 
 .color {
     color: #84DCC6;
+}
+
+/* Post Creation */
+
+.new-post-heading {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.unknown-text {
+    color: grey;
+    font-style: italic;
+}
+
+.background-post {
+    background: url("../images/about-background.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #84DCC6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.background-post .container {
+    background-color: rgba(34, 34, 34, 0.7);
+    padding: 20px;
+    border-radius: 10px;
 }
