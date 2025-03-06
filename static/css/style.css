@@ -26,6 +26,10 @@
     color: #ffff !important;
 }
 
+.nav-link:hover i{
+    color: #ffff !important;
+}
+
 /* Post Styling */
 
 .post-link {
