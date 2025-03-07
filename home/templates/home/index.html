@@ -12,6 +12,8 @@
                             <div class="image-container">
                                 {% if post.image %}
                                 <img src="{{ post.image.url }}" class="img-fluid" alt="{{ post.title }}">
+                                {% else %}
+                                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="placeholder">
                                 {% endif %}
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
