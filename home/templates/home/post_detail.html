@@ -8,19 +8,19 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
-                <p class="post-description"> {{ post.description }} </p>
-                <p><strong>Platform(s):</strong> {{ post.platform }} </p>
-                <p class="post-content"><strong>Release Date:</strong> {{ post.release_date }} </p>
-                <p><strong>Genre:</strong> {{ post.genre }} </p>
-                <p><strong>Publisher:</strong> {{ post.publisher }} </p>
-                <p><strong>Developer:</strong> {{ post.developer }} </p>
+                <p class="post-description">{{ post.description }}</p>
+                <p><strong>Platform(s):</strong> {{ post.platform }}</p>
+                <p class="post-content"><strong>Release Date:</strong> {{ post.release_date }}</p>
+                <p><strong>Genre:</strong> {{ post.genre }}</p>
+                <p><strong>Publisher:</strong> {{ post.publisher }}</p>
+                <p><strong>Developer:</strong> {{ post.developer }}</p>
                 <h7 class="post-subtitle">{{ post.created_by }} | {{ post.created_on }}</h7>
             </div>
-            <div class="post-image">
+            <div class="col-md-6 post-image">
                 {% if post.image %}
-                <img src="{{ post.image.url }}" class="scale" alt="{{ post.title }}">
+                <img src="{{ post.image.url }}" class="img-fluid" alt="{{ post.title }}">
                 {% else %}
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="placeholder">
                 {% endif %}
             </div>
         </div>
@@ -39,48 +39,44 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 comment-box">
-            <h3 class="color">Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="p-2 comments
-              {% if not comment.approved and comment.created_by == user %}
-              faded{% elif not comment.approved %} d-none{% endif %}">
-                    <p class="font-weight-bold">
-                        {{ comment.created_by }} wrote:
-                    </p>
-                    <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
+        <div class="col-md-8">
+            <div class="card mb-4 mt-3">
+                <h3 class="color">Comments:</h3>
+                <div class="card-body">
+                    {% for comment in comments %}
+                    <div class="p-2 comments {% if not comment.approved and comment.created_by == user %}faded{% elif not comment.approved %} d-none{% endif %}">
+                        <p class="font-weight-bold">{{ comment.created_by }} wrote:</p>
+                        <div id="comment{{ comment.id }}">
+                            {{ comment.body | linebreaks }}
+                        </div>
+                        <span class="font-weight-normal comment-date">{{ comment.created_on }}</span>
+                        {% if not comment.approved and comment.created_by == user %}
+                        <p class="approval">This comment is awaiting approval</p>
+                        {% endif %}
+                        {% if user.is_authenticated and comment.created_by == user %}
+                        <button class="btn btn-delete" data-comment-id="{{ comment.id }}">Delete</button>
+                        <button class="btn btn-edit" data-comment-id="{{ comment.id }}">Edit</button>
+                        {% endif %}
                     </div>
-                    <span class="font-weight-normal comment-date">
-                        {{ comment.created_on }}
-                    </span>
-                    {% if not comment.approved and comment.created_by == user %}
-                    <p class="approval">
-                        This comment is awaiting approval
-                    </p>
-                    {% endif %}
-                    {% if user.is_authenticated and comment.created_by == user %}
-                    <button class="btn btn-delete" data-comment-id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment-id="{{ comment.id }}">Edit</button>
-                    {% endif %}
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 comment-box">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <h3 class="color">Leave a comment:</h3>
-                <p class="color">Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% else %}
-                <p class="color">Log in to leave a comment</p>
-                {% endif %}
+        <div class="col-md-4">
+            <div class="card mb-4 mt-3 comment-box">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+                    <h3 class="color">Leave a comment:</h3>
+                    <p class="color">Posting as: {{ user.username }}</p>
+                    <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                    {% else %}
+                    <p class="color">Log in to leave a comment</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
@@ -94,8 +90,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete your comment?
-                This action cannot be undone.
+                Are you sure you want to delete your comment? This action cannot be undone.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
