@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-8 comment-box">
             <h3 class="color">Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
@@ -68,7 +68,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4 mt-3 comment-box">
+        <div class="col-md-4 comment-box">
             <div class="card-body">
                 {% if user.is_authenticated %}
                 <h3 class="color">Leave a comment:</h3>

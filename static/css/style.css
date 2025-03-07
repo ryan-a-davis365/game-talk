@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Nav Styling */
 
 .nav-bg {
@@ -59,6 +63,7 @@
     margin-bottom: 20px;
     padding: 10px;
     background-color: rgba(34, 34, 34, 0.7);
+    width: 100%;
 }
 
 .post-description {
@@ -86,6 +91,17 @@
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
 }
 
 /* Footer */
@@ -195,7 +211,11 @@ i {
 }
 
 .comment-box {
-    margin-left: 10px;
+    background-color: rgba(34, 34, 34, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .comment-count {
