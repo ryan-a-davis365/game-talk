@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -74,47 +75,33 @@ def profile_page(request):
     comments = user.commenter.all()
 
 
-def comment_edit(request, slug, comment_id):
-    """
-    view to edit comments
-    """
-    if request.method == "POST":
+@login_required
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if comment.created_by != request.user:
+        messages.error(request, 'You are not authorized to edit this comment.')
+        return redirect('post_detail', slug=comment.post.slug)
 
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comment = get_object_or_404(Comment, pk=comment_id)
-        comment_form = CommentForm(data=request.POST, instance=comment)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Comment updated successfully!')
+            return redirect('post_detail', slug=comment.post.slug)
+    else:
+        form = CommentForm(instance=comment)
 
-        if comment_form.is_valid() and comment.created_by == request.user:
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.approved = False
-            comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Comment updated and awaiting approval'
-            )
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
-
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return render(request, 'home/edit_comment.html', {'form': form, 'comment': comment})
 
 
-
-def comment_delete(request, slug, comment_id):
-    """
-    view to delete comment
-    """
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comment = get_object_or_404(Comment, pk=comment_id)
-
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
     if comment.created_by == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.success(request, 'Comment deleted successfully!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
-
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        messages.error(request, 'You are not authorized to delete this comment.')
+    return redirect('post_detail', slug=comment.post.slug)
 
 
