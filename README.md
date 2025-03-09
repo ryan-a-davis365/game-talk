@@ -23,6 +23,12 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
     * [***Wireframes***](#wireframes)
     * [***Database Schema***](#database-schema)
     * [***Typography***](#typography)
+1. [**Agile Development**](#agile-development)
+1. [**Features**](#features)
+    * [***Admin Page***](#admin-page)
+    * [***Navbar***](#navbar)
+    * [***Social Media and Email Links***](#social-media-and-email-links)
+    * [***Home Page***](#home-page)
 
 <hr>
 
@@ -110,3 +116,28 @@ I researched a few different fonts that I thought would fit the sites theme. I e
 
 *[Roboto](https://fonts.google.com/specimen/Roboto)
 I chose Roboto for its simplicity so the site is readible, also the font reminds of my text you see in Video Games which fits perfectly for the site.
+
+​<hr>
+
+## Agile Development
+
+I used Github projects to create and track issues and User Stories. The Agile processes and methodologies can be viewed [here](/AGILE.md)
+
+<br>
+<hr>
+<br>
+
+# **Features**
+
+## **Site Navigation**
+
+### **Admin Page**
+
+The Admin Page was setup right at the start of the project as it is crucial to provide the site with test data and users to the project.
+
+![Screenshot of admin page](docs/images/admin-page.png)
+
+<hr>
+
+### **Navbar**
+​
