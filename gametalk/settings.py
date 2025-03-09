@@ -106,7 +106,7 @@ WSGI_APPLICATION = 'gametalk.wsgi.application'
 #}
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "postgresql://neondb_owner:npg_xcly7ozQNI6P@ep-calm-credit-a2tkohxx.eu-central-1.aws.neon.tech/thumb_erupt_gear_627710"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
