@@ -27,8 +27,13 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
 1. [**Features**](#features)
     * [***Admin Page***](#admin-page)
     * [***Navbar***](#navbar)
-    * [***Social Media and Email Links***](#social-media-and-email-links)
+    * [***Social Media Links***](#social-media-links)
     * [***Home Page***](#home-page)
+    * [***About Page***](#about-page)
+    * [***Allauth Account Pages***](allauth-account-pages)
+      * [***Sign Up***](#sign-up)
+      * [***Log In***](#log-in)
+      * [***Log Out***](#log-out)
 
 <hr>
 
@@ -141,3 +146,103 @@ The Admin Page was setup right at the start of the project as it is crucial to p
 
 ### **Navbar**
 ​
+The Navbar is a bootstrap component which allows users to navigate around the site with ease. 
+
+![Screenshot of navbar](docs/images/nav-bar.png)
+
+When the user is logged out they are unable to create a post. Upon clicking the "Create Post" option on the navbar the user will be told to "Log in to create a post."
+
+The Navbar has been edited to display properly on smaller screens using bootstrap:
+
+iPhone:
+
+![Screenshot of iPhone navbar](docs/images/nav-bar-phone.png)
+
+iPad:
+
+![Screenshot of iPad navbar](docs/images/nav-bar-ipad.png)
+
+<hr>
+
+<hr>
+
+### Social Media Links
+
+The social media icons are situated at the bottom of the page on the Footer. The Social Media links are functional and will open in a new tab. 
+**NOTE:** There is no actual Social Media Content for this site at the time of writing.
+
+![Screenshot of social media links](docs/images/social-links.png)
+
+<hr>
+
+### **Home Page**
+
+The Home Page uses a background image that shows people playing games on computers, this was chosen due to its relevance to the site. The home page is where the paginated list of
+video game posts created by the users of the site or an admin will be displayed. Each video game post is a card displaying the image they provided for the game, the title, the beginning of the description, when it was created and the user it was created by. If the user who created the post does not provide an image there is a default image that will appear which says "No image available"
+
+![Screenshot of Home Page](docs/images/home-page.png)
+
+The Home Page is responsive and works well on any device. The user can search for games using the search box on the navbar. This is how it looks on an iPhone:
+
+![Screenshot of iPhone home page](docs/images/home-page-iphone.png)
+
+and an Ipad:
+
+![Screenshot of iPad navbar](docs/images/home-page-ipad.png)
+
+<hr>
+
+### **About Page**
+
+The About Page explains the benefits of users registering an account and getting involved with the website, wether that be by creating posts themselfs or commenting on other users posts and getting involved in the discussion.
+
+![Screenshot of About Page](docs/images/about-page.png)
+
+### **Allauth Account Pages**
+
+All account pages use the same background as the home and about page to match the theme of the website.
+
+#### Sign Up
+
+I used allauth to handle the account pages for the project. In order to register, the User must complete the form on the Signup Page which they get navigated to by clicking Register on the Nav Bar.
+
+![Screenshot of signup page](docs/images/sign-up-page.png)
+
+Phone:
+
+![Screenshot of iPhone signup page](docs/images/sign-up-page-phone.png)
+
+Once the user has successfully registered, they will be logged in and taken to the Home Page. The form will display error messages in several circumstances:
+
+* The user chooses a Username that is already taken
+* The password is not long enough
+* The passwords do not match
+
+<hr>
+
+#### Log In
+
+Existing Users can log in by clicking the Log In button on the Nav Bar. This will bring them to the Log In Page:
+
+![Screenshot of log in page](docs/images/sign-in-page-phone.png)
+
+If the log in details are not valid an error message will be displayed.
+
+Phone:
+
+![Screenshot of iPhone sign in page](docs/images/sign-in-page-phone.png)
+
+<hr>
+
+#### Log Out
+
+To log out of the site and end the current session, the User can navigate to Logout in the Nav Bar.
+
+![Screenshot of logout page](docs/images/sign-out-page.png)
+
+The user can confirm by clicking the "Sign Out" button or cancel by going back to another page. If the user chooses to log out, they are redirected to the Home Page and a success message informs them they have been logged out:
+
+![Screenshot of signout confirmation](docs/images/sign-out-confirmation.png)
+
+<hr>
+
