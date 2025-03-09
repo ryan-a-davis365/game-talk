@@ -19,7 +19,7 @@ class Post(models.Model):
     developer = models.CharField(max_length=100, blank=True, null=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='home_posts')
     updated_on = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='post_images/', blank=True, null=True)
+    image = models.ImageField(upload_to='media/', blank=True, null=True)
 
     class Meta:
         ordering = ["-created_on"]
