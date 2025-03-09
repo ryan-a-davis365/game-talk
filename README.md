@@ -100,6 +100,8 @@ I used [DrawSQL](https://drawsql.app/) to help visualise my database tables. See
 After researching various options for this project, I opted for the colour scheme below:
 ![Colour Palette](docs/images/colour-pallette.png)
 
+I did not end up using all of the colours because i believe the site looks a lot more cleaner with a few less colours.
+
 <hr>
 
 #### **Typography**
