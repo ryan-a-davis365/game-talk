@@ -30,10 +30,14 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
     * [***Social Media Links***](#social-media-links)
     * [***Home Page***](#home-page)
     * [***About Page***](#about-page)
+    * [***Create Post Page***](#create-post-page)
+    * [***Game Page***](#game-page)
     * [***Allauth Account Pages***](allauth-account-pages)
       * [***Sign Up***](#sign-up)
       * [***Log In***](#log-in)
       * [***Log Out***](#log-out)
+    * [***Messages***](#messages)
+    * [***Defensive Design***](#defensive-design)
 
 <hr>
 
@@ -198,6 +202,32 @@ The About Page explains the benefits of users registering an account and getting
 
 ![Screenshot of About Page](docs/images/about-page.png)
 
+<hr>
+
+### **Create Post Page** 
+
+If the user who selects the "Create Post" page is not logged in they will be presented with "Log in to create a post."
+
+![Screenshot of create post not logged in](docs/images/create-post-not-logged-in.png)
+
+If the user who selects the "Create Post" page is logged in they will be presented with a form with multiple different sections that the user can fill out to create a post.
+
+![Screenshot of create post page](docs/images/create-post-page.png)
+
+<hr>
+
+### **Game Page**
+
+Once the user clicks on a post from the home page they will be navigated to the post they selected and shown all the details that the user who created the post entered. Along with the date and time the post was made and the name of the user who created it.
+
+![Screenshot of post page](docs/images/post-page.png)
+
+If the user scrolls down the page they will see the Comment section that registered users can use to post comments, delete their own comments or edit them.
+
+![Screenshot of comment section](docs/images/comment-section.png)
+
+<hr>
+
 ### **Allauth Account Pages**
 
 All account pages use the same background as the home and about page to match the theme of the website.
@@ -245,4 +275,48 @@ The user can confirm by clicking the "Sign Out" button or cancel by going back t
 ![Screenshot of signout confirmation](docs/images/sign-out-confirmation.png)
 
 <hr>
+
+## Messages
+
+User feedback is provided by success messages with the aim of providing a more involved User Experience. These messages are dismissible by clicking the 'X':
+
+**Successful Login**
+
+![Screenshot of succesful login message](docs/images/successfully-sign-in.png)
+
+**Successful add Game Post message**
+
+![Screenshot of successful add game post message](docs/images/successful-add-game-post-message.png)
+
+**Successful Comment Submission**
+
+![Screenshot of successful comment submission](docs/images/succesful-comment.png)
+
+**Successful Comment Deletion**
+
+![Screenshot of successful comment deletion](docs/images/comment-deleted-message.png)
+
+<hr>
+
+## Defensive Design
+
+In order to avoid the user unintentionally deleting their own content, some simple defensive design programming was implemented. If a User is logged in and clicks delete on one of their reviews, they will be prompted for confirmation:
+
+![Screenshot of deletion confirmation](docs/images/deletion-comment-message.png)
+
+<hr>
+
+## **Future-Enhancements**
+
+There are a number of areas with scope for future improvement. This project has been challenging and ultimately the project deadline was fast approaching. There is potential to add the following:
+
+* The ability to view Users profiles and all the posts they have created.
+* The ability for Users to comment on other Users profiles to beging discussions with them.
+* The ability for users to be able to delete or edit their own posts.
+
+<hr>
+
+## **Testing Phase**
+
+The testing process, along with bugs, can be viewed [here](/TESTING.md)
 
