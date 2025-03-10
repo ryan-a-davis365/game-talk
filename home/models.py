@@ -34,16 +34,14 @@ def pre_save_post_receiver(sender, instance, *args, **kwargs):
 pre_save.connect(pre_save_post_receiver, sender=Post)
 
 class Comment(models.Model):
-    post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments")
-    created_by = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter")
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
     body = models.TextField()
-    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ["created_on"]
+        ordering = ["-created_on"]
 
     def __str__(self):
         return f"Comment {self.body} by {self.created_by}"

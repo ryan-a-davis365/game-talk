@@ -5,9 +5,8 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from django.db.models import Q
-from .forms import CommentForm
 from django.contrib.auth.models import User
-from .forms import PostForm
+from .forms import PostForm, CommentForm
 
 class PostList(generic.ListView):
     template_name = "home/index.html"
@@ -26,6 +25,41 @@ class PostList(generic.ListView):
             )
         return queryset
     
+
+@login_required
+def profile_page(request):
+    user = request.user
+    posts = Post.objects.filter(created_by=user)
+    comments = Comment.objects.filter(created_by=user)
+    return render(request, 'home/profile_page.html', {'posts': posts, 'comments': comments})
+
+@login_required
+def edit_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if post.created_by != request.user:
+        messages.error(request, 'You are not authorized to edit this post.')
+        return redirect('profile_page')
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Post updated successfully!')
+            return redirect('profile_page')
+    else:
+        form = PostForm(instance=post)
+
+    return render(request, 'home/edit_post.html', {'form': form, 'post': post})
+
+@login_required
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if post.created_by == request.user:
+        post.delete()
+        messages.success(request, 'Post deleted successfully!')
+    else:
+        messages.error(request, 'You are not authorized to delete this post.')
+    return redirect('profile_page')
 
 def create_post(request):
     if request.method == 'POST':
@@ -69,10 +103,6 @@ def post_detail(request, slug):
 
 def about(request):
     return render(request, 'about.html')
-
-def profile_page(request):
-    user = get_object_or_404(User, user=request.user)
-    comments = user.commenter.all()
 
 
 @login_required

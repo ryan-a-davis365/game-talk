@@ -260,3 +260,20 @@ i {
     padding: 20px;
     border-radius: 10px;
 }
+
+/* Profile Page */
+
+.dark-grey-bg {
+    background-color: #222222;
+    color: white;
+}
+
+.green-text {
+    color: #84DCC6;
+    text-decoration: none;
+}
+
+.green-text:hover {
+    color: #84DCC6;
+    text-decoration: underline;
+}
