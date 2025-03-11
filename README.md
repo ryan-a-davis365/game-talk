@@ -101,7 +101,13 @@ As a **Site Admin** I can:
 
 I used Balsamiq Wireframes to help me with my design process for this project.
 
-(Wireframe images)
+Desktop Wireframes:
+
+![Screenshot of desktop wireframes](docs/images/balsamiq-desktop-wireframes.png)
+
+Mobile Wireframes:
+
+![Screenshot of mobile wireframes](docs/images/balsamiq-mobile-wireframes.png)
 
 <hr>
 
