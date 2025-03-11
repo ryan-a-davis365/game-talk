@@ -63,6 +63,12 @@ Below is a list of bugs I found during the development process by testing myself
     * ***Solution Used:***
         * I had errors with the different folder names such as "staticfiles", "static" and "media" and setting up where the images provided by users would be sent to.
 
+1. **Intended Outcome** - Favicon's to load on all pages.
+    * ***Issue Found:***
+        * The Favicon would only load on the home page.
+    * ***Solution Used:***
+        * I was using "{% static %}" before but i removed it and went with the more simpler method of just referencing the favicon image from my "images" folder.
+
 ## **Post Development Testing**
 ### **Validators**
 
