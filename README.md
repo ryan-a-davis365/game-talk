@@ -21,6 +21,7 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
       * [***Target Audiences***](#target-audiences)
       * [***User Stories***](#user-stories)
     * [***Wireframes***](#wireframes)
+    * [***UX Flow Chart***](#ux-flow-chart)
     * [***Database Schema***](#database-schema)
     * [***Typography***](#typography)
 1. [**Agile Development**](#agile-development)
@@ -111,9 +112,15 @@ Mobile Wireframes:
 
 <hr>
 
+### **UX Flow Chart**
+
+In order to help me visualise the basic logic of how the site will work and for the user to have a smooth experience, I created the following flow chart during the planning stages using [draw.io's flow chart maker](https://app.diagrams.net/):
+
+![UX planning flow chart](docs/images/game-talk-flowchart.png)
+
 ### **Database Schema**
 I used [DrawSQL](https://drawsql.app/) to help visualise my database tables. See the image below:
-![Database Schema](docs/images/DrawSQL-diagram.png)
+![Database Schema](docs/images/drawsql-diagram.png)
 
 <hr>
 
