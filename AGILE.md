@@ -16,6 +16,43 @@ It is easy to imagine how multiple developers pulling, branching, and working on
 
 Using agile helped me focus on one task at a time and I genuinely believe the project benefitted overall from using this methodology.
 
+To view these User Stories on my project section of my repository you can click [here](https://github.com/users/ryan-a-davis365/projects/3/views/1)
+
 <hr>
 
-To view these User Stories on my project section of my repository you can click [here](https://github.com/users/ryan-a-davis365/projects/3/views/1)
+## MOSCOW Methodology
+
+During the preparation phase of the project i created a list of Must haves, Should haves, Could haves.
+
+### Must haves:
+
+* Users must be able to create draft posts.
+* Users must be able to view a paginated list of posts.
+* Users must be able to Create, Read, Update and Delete their own posts.
+* Users must be able to register an account and use that account to login.
+* Users must be able to read about the site using the About page.
+* Users must be able to view and open other users posts to read its content.
+* Users must be able to comment on other users post.
+* Users must be able to view all published comments on the site.
+* Users must be able to edit or delete their own comments.
+* Users must be able to view the site on any device.
+* Users must be able to search for posts using a search bar.
+
+### Should haves:
+
+* Users should be able to Update and Delete their own posts.
+* Users should be able to Like or Dislike other users posts.
+* Users should be able to filter posts by genre, platform, release date etc.
+
+### Could haves:
+
+* Users could have the option to Like or Dislike other users comments.
+* Users could have the option to follow another User so they can see when they post.
+* Users could have email notifications so they are alerted when someone Likes or Dislikes a comment, replies to a comment, new followers etc.
+* Users could have a Leaderboard / Trending sections to navigate to see popular posts.
+* Users could have the option to save game posts to a personal collection to come back to.
+
+
+I tried to implement as many of these as i could during the creation of Game Talk but due to the amount of time i had i wasnt able to include everything.
+
+[Return to README.md](README.md)

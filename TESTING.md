@@ -76,12 +76,17 @@ Below is a list of bugs I found during the development process by testing myself
 
 I inputed all code into the Validator individually and only errors i recieved were space errors due to using "{% %}".
 
+![HTML validator screenshot](docs/images/html-validator.png)
+
 #### ***CSS*** - https://jigsaw.w3.org/css-validator/
 
-* All pages tested, no issues found via URL or file upload.\
+* All pages tested, no issues found via URL or file upload.
+
 ![CSS validator badge](docs/images/css-validator.png)
 
-### **Lighthouse Scores**
+The only 2 errors i have are related to Font Awesome and there is nothing i can do about it.
+
+## **Lighthouse Scores**
 ### **Test conditions**
 * I did all lighthouse tests on every page on the website.
 * I ran the tests for both mobile and desktop.
@@ -94,5 +99,8 @@ I have only included one screenshot for desktop as all pages were roughly the sa
 I have only included one screenshot again due to the same reason as the desktop pages.
 
 ![Mobile Lighthouse Score](docs/images/lighthouse-mobile.png)
-***
+
+During this project confidential information was posted to GitHub due to me having an error with visual studio code and my files not saving to my pc for a reason that i do not know why.
+Because this happened i regenerated a new Secret Key and put all sensitive information back into env.py
+
 [Return to README.md](README.md)

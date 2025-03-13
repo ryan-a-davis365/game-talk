@@ -39,6 +39,9 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
       * [***Log Out***](#log-out)
     * [***Messages***](#messages)
     * [***Defensive Design***](#defensive-design)
+    * [***Future Enhancements***](#future-enhancements)
+    * [***Testing Phase***](#testing-phase)
+    * [***Deployment***](#deployment)
     * [***Software and Tech***](#software-and-tech)
     * [***Credits***](#credits)
     * [***Acknowledgements***](#acknowledgements)
@@ -76,14 +79,13 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
 
 #### **Site User**
 As a **Registered** user I can:
-* *create draft Video Game posts* in order for *admin to approve and post them after reviewing*.
 * *view a list of Video Game posts* in order to *select one to view*.
 * *click on a Video Game post* in order to *view its content*.
-* *create a Video Game post* in order to *share my review with the community*.
+* *create a Video Game post* in order to *share my chosen game with the community*.
 * *comment on other user's Video Game posts* in order to *share my opinion and interact within the community*.
 * *upload a profile picture or bio* in order to *tell a little more about myself*.
 * *edit or update my profile* in order to *keep my account up to date*.
-* *like or unlike a Video Game review* in order to *interact with site content*.
+* *like or unlike a Video Game post* in order to *interact with site content*.
 * *easily login* in order to *access my account*.
 * *easily logout* in order to *end my session on the site*.
 * *edit or delete my own Video Game post* in order to *keep my own posts relevant*.
@@ -94,9 +96,8 @@ As an **Unregistered** User I can:
 
 #### **Site Admin**
 As a **Site Admin** I can:
-* *approve user Video Game reviews* in order to *publish them to the site and check their content is appropriate*
 * *approve user comments* in order to *check that they are appropriate*
-* *view the number of likes on a Video Game review* in order to *see which is the most popular*
+* *view the number of likes on a Video Game post* in order to *see which is the most popular*
 * *delete user accounts* in order to *remove users who do not appreciate and respect others in the community*
 
 <hr>
@@ -198,7 +199,13 @@ The social media icons are situated at the bottom of the page on the Footer. The
 ### **Home Page**
 
 The Home Page uses a background image that shows people playing games on computers, this was chosen due to its relevance to the site. The home page is where the paginated list of
-video game posts created by the users of the site or an admin will be displayed. Each video game post is a card displaying the image they provided for the game, the title, the beginning of the description, when it was created and the user it was created by. If the user who created the post does not provide an image there is a default image that will appear which says "No image available"
+video game posts created by the users of the site or an admin will be displayed. Each video game post is a card displaying the image they provided for the game, the title, the beginning of the description, when it was created and the user it was created by. If the user who created the post does not provide an image there is a default image that will appear which says "no image available"
+
+No image available image:
+
+![Screenshot of no image available](docs/images/no-image-available.png)
+
+Home Page:
 
 ![Screenshot of Home Page](docs/images/home-page.png)
 
@@ -322,7 +329,7 @@ In order to avoid the user unintentionally deleting their own content, some simp
 
 <hr>
 
-## **Future-Enhancements**
+## **Future Enhancements**
 
 There are a number of areas with scope for future improvement. This project has been challenging and ultimately the project deadline was fast approaching. There is potential to add the following:
 
