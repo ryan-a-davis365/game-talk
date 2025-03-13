@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -19,7 +20,7 @@ class Post(models.Model):
     developer = models.CharField(max_length=100, blank=True, null=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='home_posts')
     updated_on = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='media/', blank=True, null=True)
+    image = CloudinaryField('image', default='placeholder')
 
     class Meta:
         ordering = ["-created_on"]

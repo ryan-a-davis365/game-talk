@@ -39,6 +39,9 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
       * [***Log Out***](#log-out)
     * [***Messages***](#messages)
     * [***Defensive Design***](#defensive-design)
+    * [***Software and Tech***](#software-and-tech)
+    * [***Credits***](#credits)
+    * [***Acknowledgements***](#acknowledgements)
 
 <hr>
 
@@ -324,8 +327,9 @@ In order to avoid the user unintentionally deleting their own content, some simp
 There are a number of areas with scope for future improvement. This project has been challenging and ultimately the project deadline was fast approaching. There is potential to add the following:
 
 * The ability to view Users profiles and all the posts they have created.
-* The ability for Users to comment on other Users profiles to beging discussions with them.
-* The ability for users to be able to delete or edit their own posts.
+* The ability for Users to comment on other Users profiles to begin discussions with them.
+* The ability for Users to be able to edit their own profile with a profile picture, bio etc.
+* The ability for Users to be able to like another Users post.
 
 <hr>
 
@@ -333,3 +337,53 @@ There are a number of areas with scope for future improvement. This project has 
 
 The testing process, along with bugs, can be viewed [here](/TESTING.md)
 
+<hr>
+
+## **Deployment**
+
+The deployment was a fairly lengthy process so I have detailed it in a seperate file. It can be found [here](/DEPLOYMENT.md)
+
+The final deployment can be viewed [here](https://gametalk-11995ffc1877.herokuapp.com/)
+
+<hr>
+
+## **Software and Tech**
+
+The following software and tech was used:
+
+- [BootStrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to provide key components such as the navbar and cards.
+- CSS to provide custom styling in addition to Bootstrap.
+- [Django](https://www.djangoproject.com/) as a Python framework to develop the project.
+- [Django all auth](https://django-allauth.readthedocs.io/en/latest/) used to handle user authentication.
+- [DrawSQL](https://drawsql.app/) to develop the logic for the project.
+- [Font Awesome](https://fontawesome.com/) to provide icons.
+- GitHub as my version control for the site.
+- [Heroku](https://www.heroku.com/) to deploy the project.
+- HTML - The base language to create templates for the site.
+- JavaScript - only used once, for the edit and delete button on comments.
+- Python - Installed packages can be found in the requirements.txt file.
+- [Summernote](https://summernote.org/) to provide a WYSIWYG text editor in the admin area.
+- [Pexels](https://www.pexels.com/) to source the background image for the site.
+
+<hr>
+
+## **Credits**
+
+* The [Django Documentation](https://docs.djangoproject.com/en/4.1/) was immensely helpful in helping me gain a greater understanding of the project.
+* Icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+* All content was written by myself but with the help from some of the I Think Before I Blog code.
+
+* General References:
+  * Stack Overflow
+  * Code Institute LMS
+  * Bootstrap Documentation
+
+  <hr>
+
+## **Acknowledgements**
+
+Richard Wells (mentor) - He went above and beyond and helped me massively with any errors i came across.
+
+My family - They have motivated me and pushed me to keep going, even when i am struggling.
+
+My girlfriend - For constantly being supportive of me and giving me the time and space to complete this project.
