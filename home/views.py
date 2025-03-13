@@ -24,7 +24,11 @@ class PostList(generic.ListView):
                 Q(genre__icontains=query)
             )
         return queryset
-    
+
+
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)
+
 
 @login_required
 def profile_page(request):
@@ -133,5 +137,3 @@ def delete_comment(request, comment_id):
     else:
         messages.error(request, 'You are not authorized to delete this comment.')
     return redirect('post_detail', slug=comment.post.slug)
-
-

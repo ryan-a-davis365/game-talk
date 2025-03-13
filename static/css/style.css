@@ -301,6 +301,10 @@ i {
 }
 
 .green-text:hover {
-    color: #84DCC6;
+    color: #ffffff;
     text-decoration: underline;
+}
+
+.profile-create-post {
+    font-size: 1.5rem;
 }

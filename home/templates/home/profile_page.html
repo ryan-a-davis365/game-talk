@@ -5,6 +5,8 @@
 <div class="background">
     <div class="container">
         <h1 class="mt-4">Profile Page</h1>
+        <a class="nav-link green-text profile-create-post" href="{% url 'create_post' %}">
+            <i class="fas fa-plus"></i> Create Post</a>
         <h3 class="mt-4">Your Posts</h3>
         <ul class="list-group mb-4">
             {% for post in posts %}
