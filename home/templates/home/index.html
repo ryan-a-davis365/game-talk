@@ -15,7 +15,7 @@
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <img class="card-img-top" src=" {{ post.image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
