@@ -3,7 +3,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-<div class="masthead background">
+<div class="masthead background-comments">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
@@ -17,10 +17,10 @@
                 <h7 class="post-subtitle">{{ post.created_by }} | {{ post.created_on }}</h7>
             </div>
             <div class="col-md-6 post-image">
-                {% if post.image %}
-                <img src="{{ post.image.url }}" class="img-fluid" alt="{{ post.title }}">
+                {% if "placeholder" in post.image.url %}
+                <img class="card-img-top resize" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                 {% else %}
-                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="placeholder">
+                <img class="card-img-top resize" src=" {{ post.image.url }}" alt="{{ post.title }}">
                 {% endif %}
             </div>
         </div>
@@ -44,7 +44,8 @@
                 <h3 class="color">Comments:</h3>
                 <div class="card-body">
                     {% for comment in comments %}
-                    <div class="p-2 comments {% if not comment.approved and comment.created_by == user %}faded{% elif not comment.approved %} d-none{% endif %}">
+                    <div
+                        class="p-2 comments {% if not comment.approved and comment.created_by == user %}faded{% elif not comment.approved %} d-none{% endif %}">
                         <p class="font-weight-bold">{{ comment.created_by }} wrote:</p>
                         <div id="comment{{ comment.id }}">
                             {{ comment.body | linebreaks }}

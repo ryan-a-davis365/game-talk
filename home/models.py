@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
 from cloudinary.models import CloudinaryField
+import uuid
 
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -31,6 +32,8 @@ class Post(models.Model):
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = slugify(instance.title)
+    if Post.objects.filter(slug=instance.slug).exists():
+        instance.slug = f"{instance.slug}-{uuid.uuid4().hex[:8]}"
 
 pre_save.connect(pre_save_post_receiver, sender=Post)
 
