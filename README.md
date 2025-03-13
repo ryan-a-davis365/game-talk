@@ -7,9 +7,9 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
 
 <hr>
 
-(Am I Responsive Screenshot)
+![am i responsive screenshot](docs/images/am-i-responsive.png)
 
-(Click here to view the final deployment of the site)
+(Click [here](https://gametalk-11995ffc1877.herokuapp.com/) to view the final deployment of the site)
 
 <hr>
 
