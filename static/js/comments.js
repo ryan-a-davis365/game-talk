@@ -12,15 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener("click", (e) => {
             let commentId = e.target.getAttribute("data-comment-id");
             if (commentId) {
-                let commentElement = document.getElementById(`comment${commentId}`);
-                if (commentElement) {
-                    let commentContent = commentElement.innerText;
-                    commentText.value = commentContent;
-                    submitButton.innerText = "Update";
-                    commentForm.setAttribute("action", `/edit_comment/${commentId}/`);
-                } else {
-                    console.error(`Element with ID comment${commentId} not found`);
-                }
+                window.location.href = `/edit_comment/${commentId}/`;
             } else {
                 console.error("Comment ID is null");
             }

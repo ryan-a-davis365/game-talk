@@ -61,7 +61,6 @@ body {
 
 .col-md-4 {
     max-width: 300px;
-    margin: 0;
 }
 
 .card {
@@ -69,7 +68,7 @@ body {
     padding: 10px;
     background-color: rgba(34, 34, 34, 0.7);
     width: 100%;
-    margin-left: 10px;
+    max-width: 300px;
 }
 
 .post-description {
