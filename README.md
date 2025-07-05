@@ -133,12 +133,12 @@ The only user story in this Epic is related to the initial deployment; this is a
 ##### **EPIC 3 - Sorting and Searching:**
 
 * As a **Site User** I want to be able to...**
-  * ...**Search for a product by name** so that I can **find a specific post I'd like to view.**
+  * ...**Search for a post by name** so that I can **find a specific post I'd like to view.**
 
 ##### **EPIC 4 - Registration and User Accounts:**
 
 * As a **Site User** I want to be able to...
-  * ...**Register an account** so that I can **comment on a post.**
+  * ...**Register an account** so that I can **create a post, edit/delete my own posts and comment on a post.**
   * ...**View my profile** so that I can **edit or delete posts.**
 
 ##### **EPIC 5 - Posts:**
