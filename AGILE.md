@@ -18,7 +18,37 @@ Using agile helped me focus on one task at a time and I genuinely believe the pr
 
 To view these User Stories on my project section of my repository you can click [here](https://github.com/users/ryan-a-davis365/projects/3/views/1)
 
-<hr>
+## Sprint Notes
+
+### Sprint 1 Notes
+
+![Sprint 1](docs/images/sprint-1-gt.png)
+
+The sprint's focus was to get the development environment set up and deployed to Heroku to test in production as early as possible.
+
+### Sprint 2 Notes
+
+![Sprint 2](docs/images/sprint-2-gt.png)
+
+This sprint aimed to get the project's coding side up and running. Mainly the ability to view the webpage, the posts and the individual post pages.
+
+### Sprint 3 Notes
+
+![Sprint 3](docs/images/sprint-3-gt.png)
+
+This sprint focuses on the ability to search for a game post by the search bar at the top of the page and to be able to register an account so the user can start creating posts.
+
+### Sprint 4 Notes
+
+![Sprint 4](docs/images/sprint-4-gt.png)
+
+This sprint focuses on ensuring the user has the ability to edit/delete their own posts and to be able to leave a comment on posts.
+
+### Sprint 5 Notes
+
+![Sprint 5](docs/images/sprint-5-gt.png)
+
+This sprint was a small one, it focused on ensuring the admins of the site have the power to edit/delete any post on the site created by any user for whatever reason they need.
 
 ## MOSCOW Methodology
 
