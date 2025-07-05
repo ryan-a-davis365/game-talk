@@ -175,13 +175,15 @@ In order to help me visualise the basic logic of how the site will work and for 
 ![UX planning flow chart](docs/images/game-talk-flowchart.png)
 
 ### **Database Schema**
+
 I used [DrawSQL](https://drawsql.app/) to help visualise my database tables. See the image below:
 
-![Database Schema](docs/images/drawsql-diagram.png)
+![Database Schema](docs/images/database-schema.png)
 
 <hr>
 
 ### **Colour Scheme**
+
 After researching various options for this project, I opted for the colour scheme below:
 ![Colour Palette](docs/images/colour-pallette.png)
 
