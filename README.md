@@ -20,6 +20,12 @@ Game Talk is designed with the aim of creating a platform where everyone can sha
       * [***Site Aims***](#site-aims)
       * [***Target Audiences***](#target-audiences)
       * [***User Stories***](#user-stories)
+        * [**EPIC 1 - Set up and Deployment:**](#epic-1---set-up-and-deployment)
+        * [**EPIC 2 - Viewing and Navigation:**](#epic-2---viewing-and-navigation)
+        * [**EPIC 3 - Sorting and Searching:**](#epic-3---sorting-and-searching)
+        * [**EPIC 4 - Registration and User Accounts:**](#epic-4---registration-and-user-accounts)
+        * [**EPIC 5 - Posts:**](#epic-5---posts)
+        * [**EPIC 6 - Admin and Site Management:**](#epic-6---admin-and-site-management)
     * [***Wireframes***](#wireframes)
     * [***UX Flow Chart***](#ux-flow-chart)
     * [***Database Schema***](#database-schema)
@@ -101,6 +107,52 @@ As a **Site Admin** I can:
 * *delete user accounts* in order to *remove users who do not appreciate and respect others in the community*
 
 <hr>
+
+##### **EPIC 1 - Set up and Deployment:**
+
+This epic will be tasks rather than user stories since they will be aimed at me as the developer rather than the user. The below tasks will be completed before the first sprint and will be used to set up the project and ensure that it is deployed to Heroku.
+
+* As a **Developer** I can...
+  * ...**Create a Git hub repository** so that I can **store my project files online.**
+  * ...**Create a virtual environment on my local machine** so that I can **avoid polluting my machine on a global level.**
+  * ...**Install Django and required libraries** so that I can **work with a postgress Database and cloudbased images from my local development IDE.**
+  * ...**Set up my local coding environment** so that I can **develop on my local machine and deploy securely without revealing sensitive information.**
+  * ...**Create a Heroku app** so that I can **link to the a virtually hosted Postgres database for the deployed site.**
+
+The only user story in this Epic is related to the initial deployment; this is a user story rather than a task because it directly offers value to the user as opposed to being tasks required to create the project: -
+
+* As a **User**, I can **access a live url** so that I can **use the site on any device.**
+
+##### **EPIC 2 - Viewing and Navigation:**
+
+* As a **Site User** I want to be able to...
+  * ...**Read about the site** so that I can **understand the sites purpose.**
+  * ...**View paginated list of posts** so that I can **select which post I want to view.**
+  * ...**View individual posts** so that I can **select a post in particular i want to read.**
+
+##### **EPIC 3 - Sorting and Searching:**
+
+* As a **Site User** I want to be able to...**
+  * ...**Search for a product by name** so that I can **find a specific post I'd like to view.**
+
+##### **EPIC 4 - Registration and User Accounts:**
+
+* As a **Site User** I want to be able to...
+  * ...**Register an account** so that I can **comment on a post.**
+  * ...**View my profile** so that I can **edit or delete posts.**
+
+##### **EPIC 5 - Posts:**
+
+* As a **Site User** I want to be able to...
+  * ...**Create a post** so that I can **make my post accessible for other users.**
+  * ...**Comment on a post** so that I can **be involved in the discussion.**
+  * ...**Modify or delete a comment on a post** so that I can **update my public opinion should it ever change.**
+  * ...**View comments** so that I can **view comments on an individual post so that I can read the conversation.**
+
+##### **EPIC 6 - Admin and Site Management:**
+
+* As a **Store Owner** I want to be able to...
+  * ...**Manage Posts** so that I can **create, read, update and delete posts so that I can manage the sites content.**
 
 ### **Wireframes**
 

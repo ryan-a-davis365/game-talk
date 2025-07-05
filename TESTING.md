@@ -6,6 +6,7 @@
     * [**Validators**](#validators)
         * [*HTML*](#html---httpsvalidatorw3orgnu)
         * [*CSS*](#css---httpsjigsaww3orgcss-validator)
+        * [*JavaScript*](#javascript)
   * [**Lighthouse Scores**](#lighthouse-scores)
       * [*Desktop Version:*](#desktop-version)
       * [*Mobile Version*](#mobile-version)
