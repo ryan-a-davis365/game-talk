@@ -176,6 +176,7 @@ In order to help me visualise the basic logic of how the site will work and for 
 
 ### **Database Schema**
 I used [DrawSQL](https://drawsql.app/) to help visualise my database tables. See the image below:
+
 ![Database Schema](docs/images/drawsql-diagram.png)
 
 <hr>
