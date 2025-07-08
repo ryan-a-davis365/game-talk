@@ -172,8 +172,6 @@ I inputed all code into the Validator individually and only errors i recieved we
 
 ![CSS validator badge](docs/images/css-validator.png)
 
-The only 2 errors i have are related to Font Awesome and there is nothing i can do about it.
-
 ## **Lighthouse Scores**
 ### **Test conditions**
 * I did all lighthouse tests on every page on the website.
